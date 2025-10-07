@@ -3,87 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ma Petite Page Web</title>
+  <title>Portfolio – Ton Nom</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafc;
       color: #333;
     }
 
     header {
-      background-color: #4a90e2;
+      background-color: #1a73e8;
       color: white;
       text-align: center;
-      padding: 20px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
     }
 
     nav {
-      background-color: #357ABD;
+      background-color: #145dbf;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      gap: 30px;
+      padding: 15px 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: opacity 0.3s;
     }
 
     nav a:hover {
-      color: #dfe9f3;
+      opacity: 0.8;
     }
 
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 0 20px;
     }
 
-    h1 {
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #1a73e8;
+      border-bottom: 2px solid #1a73e8;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .about {
       text-align: center;
-      color: #4a90e2;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #1a73e8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      margin-top: 0;
+      color: #145dbf;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
-      background-color: #4a90e2;
+      padding: 20px;
+      background-color: #1a73e8;
       color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .social-links a:hover {
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Bienvenue sur ma page web</h1>
+    <h1>Ton Nom</h1>
+    <p>Étudiant en économie, passionné par la finance et la création de projets</p>
   </header>
 
   <nav>
-    <a href="#">Accueil</a>
-    <a href="#">À propos</a>
-    <a href="#">Contact</a>
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <main>
-    <h2>Présentation</h2>
-    <p>Bonjour et bienvenue sur mon site ! Cette petite page web est un exemple simple de structure HTML avec un peu de style en CSS.</p>
-    <p>Tu peux facilement la modifier pour ajouter ton propre contenu, tes images, ou même des animations.</p>
+    <section id="about" class="about">
+      <img src="https://via.placeholder.com/150" alt="Photo de profil">
+      <h2>À propos de moi</h2>
+      <p>Je suis un étudiant motivé et curieux, passionné par la finance, la création de contenu et le développement de projets associatifs. J’aime apprendre, entreprendre et relever de nouveaux défis.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Mes projets</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Assas Run Club</h3>
+          <p>Co-fondateur et président d’une association de running qui rassemble les étudiants d’Assas pour des entraînements et des événements sportifs hebdomadaires.</p>
+        </div>
+
+        <div class="project">
+          <h3>TEDxPanthéonAssas</h3>
+          <p>Organisation de conférences TEDx visant à inspirer les étudiants à travers des talks sur des sujets variés : innovation, culture, société et avenir.</p>
+        </div>
+
+        <div class="project">
+          <h3>Site de livraison de croquettes</h3>
+          <p>Création d’un site e-commerce avec abonnement pour la livraison personnalisée de croquettes pour chiens et chats.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p style="text-align:center;">Tu peux me contacter sur mes réseaux ou par email :</p>
+      <div class="social-links">
+        <a href="mailto:tonemail@example.com">📧 Email</a>
+        <a href="https://linkedin.com/in/tonprofil" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/tonprofil" target="_blank">💻 GitHub</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    © 2025 - MonSiteWeb. Tous droits réservés.
+    © 2025 Ton Nom – Tous droits réservés.
   </footer>
 
 </body>
