@@ -11,7 +11,69 @@
 
     <script src="javascript.js"></script>
   </head>
-  <body>
+
+
   
+  <body>
+    <header>
+    <h1>Antoine VERRANDO</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section d’accueil / présentation -->
+  <section id="accueil" class="hero">
+    <h2>Bienvenue sur mon portfolio</h2>
+    <p>Je suis [ton rôle — ex : étudiant en économie, passionné par la finance et le web]</p>
+    <a href="#projets" class="btn">Voir mes projets</a>
+  </section>
+
+  <!-- Section À propos -->
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <p>Quelques lignes pour te présenter — parcours, compétences, centres d’intérêt, etc.</p>
+  </section>
+
+  <!-- Section Projets -->
+  <section id="projets">
+    <h2>Mes projets</h2>
+    <div class="projets-container">
+      <!-- Chaque projet peut être dans une "card" -->
+      <article class="projet">
+        <img src="images/projet1.jpg" alt="Aperçu du projet 1">
+        <h3>Nom du projet 1</h3>
+        <p>Description courte du projet.</p>
+      </article>
+
+      <article class="projet">
+        <img src="images/projet2.jpg" alt="Aperçu du projet 2">
+        <h3>Nom du projet 2</h3>
+        <p>Description courte du projet.</p>
+      </article>
+      <!-- etc. -->
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Ton Nom — Tous droits réservés</p>
+  </footer>
   </body>
 </html>
